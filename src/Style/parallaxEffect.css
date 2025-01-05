@@ -1,0 +1,20 @@
+.parallaxOrImageShow .bg_parallax_scroll{
+    background: url("../assets/ParallaxEffect/parallaxEffect.jpg") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 590px;
+}
+.parallaxOrImageShow img{
+    display: none;
+}
+
+@media (max-width:992px) {
+    .parallaxOrImageShow .bg_parallax_scroll{
+        display: none;
+    }
+    .parallaxOrImageShow img{
+        display: block;
+        width: 100%;
+    }
+}

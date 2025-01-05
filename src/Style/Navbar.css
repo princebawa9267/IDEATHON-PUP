@@ -50,7 +50,7 @@ header .logo img {
 header .nav-link {
   display: inline-flex;
   justify-content: center;
-  color: var(--white);
+  color: var(--white)!important;
   padding: 0 1rem !important;
   font-size: 1.125rem;
   font-weight: 500;
@@ -63,8 +63,8 @@ header .nav-link {
   transition: all 15ms ease-in-out;
 }
 
-header .sticky .nav-link {
-  color: var(--light-black);
+header .sticky .nav-link,header .sticky .nav-link.active,header .sticky .nav-link.show{
+  color: var(--light-black)!important;
 }
 
 header .nav-link:hover {

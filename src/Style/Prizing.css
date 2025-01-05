@@ -1,0 +1,146 @@
+/* General Styles */
+.pricing-container {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  /* background: linear-gradient(135deg, #1c1b2a, #28274d); */
+  /* color: #ffff; */
+  text-align: center;
+  min-height: 100vh;
+  header {
+    padding: 40px;
+    margin-bottom: 20px;
+  }
+
+  header h1 {
+    font-size: 90px;
+    text-align: center;
+    font-family: var(--lilita-font);
+    margin: 30px;
+    margin-top: 70px;
+    margin-bottom: 0rem;
+    /* color: ; */
+  }
+
+  header p {
+    font-size: 1.2rem;
+    /* color: #dddddd; */
+  }
+
+  /* Prizes Container */
+  .prizes-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  /* Gift Box */
+  .prize-card {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    background: linear-gradient(135deg, #43436e, #1c1b2a);
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.4s, box-shadow 0.4s;
+    cursor: pointer;
+    overflow: hidden;
+  }
+
+  .prize-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+  }
+
+  /* Lid */
+  .gift-lid {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff6347;
+    width: 100%;
+    height: 60px;
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 2.5rem;
+    z-index: 2;
+  }
+
+  /* Body */
+  .gift-body {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .gift-body h2 {
+    font-size: 1.8rem;
+    margin: 0;
+    color: #ffcb74;
+  }
+
+  .gift-body p {
+    font-size: 1.4rem;
+    margin: 10px 0 0;
+  }
+
+  /* Glow Effect */
+  .glow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0)
+    );
+    z-index: 1;
+    animation: pulse 2s infinite;
+  }
+
+  /* Glow Animation */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 0.7;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0.7;
+    }
+  }
+}
+
+@media (max-width:992px) {
+  .pricing-container header h1
+  {
+      font-size: 70px;
+  }
+  
+}
+
+@media (max-width:768px) {
+  .pricing-container header h1
+  {
+      font-size: 50px;
+  }
+}
+@media (max-width:330px) {
+  .pricing-container header h1
+  {
+      font-size: 40px;
+  }
+}

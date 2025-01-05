@@ -1,15 +1,59 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { HB } from '../../assets';
 import { Container, Row, Col } from 'react-bootstrap';
+import { motion } from 'framer-motion';
 
 const Home = () => {
+
+  // const [mousePosition, setMousePosition] = useState({
+  //   x : 0,
+  //   y : 0,
+  // });
+
+  // console.log(mousePosition);
+
+  // useEffect(() =>
+  // {
+  //   const mouseMove = e =>
+  //   {
+  //       setMousePosition({x: e.clientX, y : e.clientY })
+  //   }
+  //   window.addEventListener("mousemove",mouseMove);
+  //   return () =>
+  //   {
+  //     window.removeEventListener("mousemove",mouseMove);
+  //   }
+  // },[]);
+
+  // const variants = {
+  //   default : {
+  //     x : mousePosition.x -16,
+  //     y : mousePosition.y -16
+  //   },
+  //   text : {
+  //     height : 150,
+  //     width : 150,
+  //     x : mousePosition.x - 90,
+  //     y : mousePosition.y - 90,
+  //     backgroundColor : "white",
+  //     mixBlendMode : "difference"
+  //   }
+  // }
+
+  // const [cursorVariant,setCursorVariant] = useState("default");
+
+  // const textEnter = () => setCursorVariant("text");
+  // const textLeave = () => setCursorVariant("default")
+
+
+
   return (
-    <section className='hero_section'>
+    <section id='home' className='hero_section'>
       <Container>
         <Row>
           <Col lg={7}>
-            <div className='hero_text text-center'>
-              <h1 className='text-white'>Ideathon</h1>
+            <div /*  onMouseEnter={textEnter} onMouseLeave={textLeave}  */ className='hero_text text-center'>
+              <h1  className='text-white'>Ideathon</h1>
               <h2 className='text-white'>What is Ideathon 2025?</h2>
               <p className='text-white' pt-2 pb-4>
                 Punjabi University Patiala Teams are actively participating in
@@ -34,12 +78,13 @@ const Home = () => {
             </div>
           </Col>
           <Col lg={5} className='mb-5 mb-lg-0'>
-            <div className='position:relative' style={{display:'grid', placeItems:'center', height:'100'}} >
-              <img src={HB} className='img-fluid' alt='Hero' style={{maxHeight:'35rem'}} />
+            <div  className='position:relative' style={{display:'grid', placeItems:'center', height:'100', transition:"all "}} >
+              <img /*onMouseEnter={textEnter} onMouseLeave={textLeave}*/ src={HB} className='img img-fluid' alt='Hero' style={{maxHeight:'35rem'}} />
             </div>
           </Col>
         </Row>
       </Container>
+      {/* <motion.div className='cursor' variants={variants} animate={cursorVariant}/> */}
     </section>
   );
 };

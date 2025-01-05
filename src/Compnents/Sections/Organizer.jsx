@@ -2,7 +2,7 @@ import React from 'react'
 
 const Organizer = () => {
   return (
-    <div>
+    <div id='organizers'>
       
     </div>
   )

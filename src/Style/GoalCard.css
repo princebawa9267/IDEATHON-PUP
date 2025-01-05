@@ -17,8 +17,9 @@
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    padding: 0;
+    padding: 0px;
     margin: 0;
+
 }
 /* GoalCard CSS */
 .GoalCard .container .card{
@@ -113,22 +114,58 @@
 }
 
 @media (max-width: 992px) {
-    .list-items .container{
-        /* width: 100%; */
-        /* flex-direction: column; */
-        /* align-items: center; */
-    }
-    .GoalCard .container
+    /* .list-items .container{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    } */
+    /* .GoalCard .container
     {
-        /* width: 600px; */
-    }
+        width: 600px;} */
     .GoalCard .container .card{
-        width: 300px;
+        width: 350px;
         height: 290px;
     }
 }
 
+@media (max-width: 1040px) {
+    .list-items .container
+{
+    padding: 20px;
+}
+    .GoalCard .container .card{
+        width: 350px;
+        height: 290px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 992px) {
+    /* .list-items .container{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    } */
+    /* .GoalCard .container
+    {
+        width: 600px;} */
+        .list-items .container
+        {
+            justify-content: space-between;
+            padding: 0px;
+        }
+    .GoalCard .container .card{
+        width: 300px;
+        height: 320px;
+    }
+}
+
 @media (max-width: 768px) {
+    .list-items .container
+        {
+            justify-content: space-evenly;
+            padding: 0px;
+        }
     .GoalCard .container .card
     {
         max-width: 400px;
@@ -157,6 +194,7 @@
         position: relative;
         width: 100%;
         margin-left: 0px;
+        padding: 10px 10px;
         /* padding-top: 20px; */
         text-align: center;
     }

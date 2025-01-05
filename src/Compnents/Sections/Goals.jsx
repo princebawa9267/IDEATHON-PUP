@@ -4,7 +4,7 @@ import ListGoals from '../Goals Cards/ListGoals'
 
 const Goals = () => {
   return (
-    <div className='Goals-Section'>
+    <div id='goals' className='Goals-Section'>
       <h1>17 Sustainable goals</h1>
       <ListGoals data={GoalJSON}/>
     </div>

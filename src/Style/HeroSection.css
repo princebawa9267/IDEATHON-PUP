@@ -1,3 +1,4 @@
+
 .hero_section
 {
     position: relative;
@@ -5,6 +6,9 @@
     background-size: cover;
     background-attachment: fixed;
     padding-top: 170px;
+
+    /* Cursor none on Home Page */
+    /* cursor: none; */
     
     /* .hero_text .main
     {
@@ -17,7 +21,34 @@
     font-size: 70px;
     font-family: var(--lilita-font);
     margin-bottom: 15px;
-    
 }
 
-/* .hero_section . */
+@media (max-width:768px) {
+    .hero_section .hero_text h1{
+        font-size: 60px;
+    }
+  }
+
+@media (max-width:330px){
+    .hero_section .hero_text h1{
+        font-size: 50px;
+    }
+}
+@media (max-width:252px){
+    .hero_section .hero_text h1{
+        font-size: 40px;
+    }
+}
+
+
+.hero_section .cursor
+{
+    background-color: white;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
